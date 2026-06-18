@@ -1,0 +1,25 @@
+# robots.txt — ta2tut.ru
+# Поисковикам (Яндекс, Google) — полный доступ.
+User-agent: *
+Allow: /
+
+# AI-краулеры обучения моделей — закрыто (контент не для обучения чужих ИИ).
+User-agent: GPTBot
+Disallow: /
+User-agent: ClaudeBot
+Disallow: /
+User-agent: CCBot
+Disallow: /
+User-agent: Google-Extended
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+User-agent: Amazonbot
+Disallow: /
+User-agent: PerplexityBot
+Disallow: /
+User-agent: meta-externalagent
+Disallow: /
+
+Sitemap: https://ta2tut.ru/sitemap.xml
+Host: ta2tut.ru
