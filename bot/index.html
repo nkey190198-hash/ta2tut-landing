@@ -6,12 +6,39 @@
 <title>ТАТУ ТУТ — открываем бота…</title>
 <meta name="robots" content="noindex">
 <!-- Хаб-редирект под нашим контролем: если Telegram снова сменит рабочий
-     домен — меняем ТОЛЬКО этот файл, все шапки/реклама продолжают жить. -->
-<meta http-equiv="refresh" content="1;url=https://telegram.me/ta2_blockbot">
-<script>location.replace("https://telegram.me/ta2_blockbot" + (location.search || ""));</script>
+     домен — меняем ТОЛЬКО этот файл, все шапки/реклама продолжают жить.
+
+     26.07.2026 — ПОЧЕМУ ЗДЕСЬ ТАК:
+     Через этот хаб идут ссылки мастеров вида ?start=tt_<токен> (Instagram
+     режет прямые t.me как «переманивание в другой сервис», поэтому в шапки
+     и сторис уходит именно этот адрес). Хвост ?start= — ЭТО ПРИВЯЗКА КЛИЕНТА
+     К МАСТЕРУ. Потеряли хвост → клиент попал в бота «ничей», мастер молча
+     лишился заявки.
+     Раньше две запасные дороги (meta-refresh и ссылка «жми сюда») вели на
+     голый telegram.me БЕЗ хвоста и тихо съедали привязку. Теперь:
+       • meta-refresh спрятан в <noscript> — он больше не гонится наперегонки
+         с JS и срабатывает только там, где скриптов нет;
+       • ссылка «жми сюда» дополняется хвостом на лету;
+       • основной путь (location.replace) неизменен и уходит мгновенно. -->
+<script>
+  (function () {
+    var qs = location.search || "";
+    var target = "https://telegram.me/ta2_blockbot" + qs;
+    // Запасную ссылку чиним ДО редиректа: если переход заблокируют, человек
+    // ткнёт руками и всё равно принесёт метку мастера.
+    document.addEventListener("DOMContentLoaded", function () {
+      var a = document.getElementById("manual");
+      if (a) a.href = target;
+    });
+    location.replace(target);
+  })();
+</script>
+<noscript>
+  <meta http-equiv="refresh" content="1;url=https://telegram.me/ta2_blockbot">
+</noscript>
 </head>
 <body style="margin:0;font-family:system-ui,-apple-system,sans-serif;background:#0b0b0f;color:#ededf2;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center">
 <p style="padding:24px">Открываем бота ТАТУ ТУТ…<br><br>
-Если не открылось — <a style="color:#8ab4ff" href="https://telegram.me/ta2_blockbot">жми сюда</a>.</p>
+Если не открылось — <a id="manual" style="color:#8ab4ff" href="https://telegram.me/ta2_blockbot">жми сюда</a>.</p>
 </body>
 </html>
