@@ -5,40 +5,38 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ТАТУ ТУТ — открываем бота…</title>
 <meta name="robots" content="noindex">
-<!-- Хаб-редирект под нашим контролем: если Telegram снова сменит рабочий
-     домен — меняем ТОЛЬКО этот файл, все шапки/реклама продолжают жить.
-
-     26.07.2026 — ПОЧЕМУ ЗДЕСЬ ТАК:
-     Через этот хаб идут ссылки мастеров вида ?start=tt_<токен> (Instagram
-     режет прямые t.me как «переманивание в другой сервис», поэтому в шапки
-     и сторис уходит именно этот адрес). Хвост ?start= — ЭТО ПРИВЯЗКА КЛИЕНТА
-     К МАСТЕРУ. Потеряли хвост → клиент попал в бота «ничей», мастер молча
-     лишился заявки.
-     Раньше две запасные дороги (meta-refresh и ссылка «жми сюда») вели на
-     голый telegram.me БЕЗ хвоста и тихо съедали привязку. Теперь:
-       • meta-refresh спрятан в <noscript> — он больше не гонится наперегонки
-         с JS и срабатывает только там, где скриптов нет;
-       • ссылка «жми сюда» дополняется хвостом на лету;
-       • основной путь (location.replace) неизменен и уходит мгновенно. -->
+<!-- Хаб-редирект под нашим контролем. 07.08.2026 — ПОЧЕМУ ТАК:
+     1) Хвост ?start= — привязка клиента к мастеру (tt_<токен>) и рекламные
+        метки (ig25/th25/yt_dk). Терять его НЕЛЬЗЯ ни на одном пути.
+     2) В РФ веб-домены t.me/telegram.me блокируются (подменённый сертификат)
+        — in-app браузеры Instagram/Threads показывали «сертификат не является
+        доверенным» и человек ТЕРЯЛСЯ. Поэтому основной путь теперь НАТИВНЫЙ
+        tg://resolve — открывает приложение Telegram в обход веба и блокировок.
+     3) Веб-ссылка остаётся ВИДИМОЙ кнопкой (десктоп/нет приложения). -->
 <script>
   (function () {
     var qs = location.search || "";
-    var target = "https://telegram.me/ta2_blockbot" + qs;
-    // Запасную ссылку чиним ДО редиректа: если переход заблокируют, человек
-    // ткнёт руками и всё равно принесёт метку мастера.
+    var m = qs.match(/[?&]start=([^&]+)/);
+    var st = m ? m[1] : "";
+    var native = "tg://resolve?domain=ta2_blockbot" + (st ? "&start=" + st : "");
+    var web = "https://t.me/ta2_blockbot" + (st ? "?start=" + st : "");
     document.addEventListener("DOMContentLoaded", function () {
-      var a = document.getElementById("manual");
-      if (a) a.href = target;
+      var a = document.getElementById("app");
+      var b = document.getElementById("web");
+      if (a) a.href = native;
+      if (b) b.href = web;
     });
-    location.replace(target);
+    // Нативный переход: если Telegram установлен — откроется приложение.
+    // Если нет — останется страница с двумя кнопками.
+    location.replace(native);
   })();
 </script>
-<noscript>
-  <meta http-equiv="refresh" content="1;url=https://telegram.me/ta2_blockbot">
-</noscript>
 </head>
 <body style="margin:0;font-family:system-ui,-apple-system,sans-serif;background:#0b0b0f;color:#ededf2;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center">
-<p style="padding:24px">Открываем бота ТАТУ ТУТ…<br><br>
-Если не открылось — <a id="manual" style="color:#8ab4ff" href="https://telegram.me/ta2_blockbot">жми сюда</a>.</p>
+<div style="padding:24px;max-width:420px">
+<p style="font-size:17px;margin:0 0 18px">Открываем бота ТАТУ ТУТ в приложении Telegram…</p>
+<p style="margin:0 0 10px"><a id="app" style="display:inline-block;background:#c4f000;color:#0b1208;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px" href="tg://resolve?domain=ta2_blockbot">Открыть Telegram</a></p>
+<p style="margin:0"><a id="web" style="color:#8ab4ff;font-size:14px" href="https://t.me/ta2_blockbot">Открыть в браузере (нужен VPN в РФ)</a></p>
+</div>
 </body>
 </html>

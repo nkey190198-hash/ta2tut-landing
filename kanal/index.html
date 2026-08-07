@@ -5,12 +5,21 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ТАТУ ТУТ — открываем канал…</title>
 <meta name="robots" content="noindex">
-<!-- Хаб-редирект под нашим контролем: цель меняется только в этом файле. -->
-<meta http-equiv="refresh" content="1;url=https://telegram.me/tatututai">
-<script>location.replace("https://telegram.me/tatututai");</script>
+<!-- Хаб-редирект. 07.08.2026: основной путь — нативный tg:// (в РФ веб-домены
+     t.me блокируются, in-app браузеры IG/Threads падали в ошибку сертификата).
+     ?src= хвост (ig25k/th25k) — метка клика, канал её не видит (ограничение
+     Telegram), считается пикселем страницы. -->
+<script>
+  (function () {
+    location.replace("tg://resolve?domain=tatututai");
+  })();
+</script>
 </head>
 <body style="margin:0;font-family:system-ui,-apple-system,sans-serif;background:#0b0b0f;color:#ededf2;display:flex;min-height:100vh;align-items:center;justify-content:center;text-align:center">
-<p style="padding:24px">Открываем канал ТАТУ ТУТ…<br><br>
-Если не открылось — <a style="color:#8ab4ff" href="https://telegram.me/tatututai">жми сюда</a>.</p>
+<div style="padding:24px;max-width:420px">
+<p style="font-size:17px;margin:0 0 18px">Открываем канал ТАТУ-РАДАР в приложении Telegram…</p>
+<p style="margin:0 0 10px"><a style="display:inline-block;background:#c4f000;color:#0b1208;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px" href="tg://resolve?domain=tatututai">Открыть Telegram</a></p>
+<p style="margin:0"><a style="color:#8ab4ff;font-size:14px" href="https://t.me/tatututai">Открыть в браузере (нужен VPN в РФ)</a></p>
+</div>
 </body>
 </html>
