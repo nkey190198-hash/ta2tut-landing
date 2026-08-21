@@ -1087,41 +1087,13 @@ img,svg{display:block;max-width:100%}
       <div class="reveal" style="transition-delay:60ms">
         <div style="background:var(--surface);border:1px solid var(--border-2);border-radius:var(--radius-lg);padding:32px 28px">
           <div id="partner-form">
-            <div style="display:flex;flex-direction:column;gap:16px">
-              <div>
-                <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Имя</label>
-                <input id="pf-name" type="text" placeholder="Как к вам обращаться" style="width:100%;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:13px 16px;color:var(--text);font-size:14px;font-family:Inter,sans-serif;outline:none;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-2)'">
-              </div>
-              <div>
-                <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Контакт (TG / Email)</label>
-                <input id="pf-contact" type="text" placeholder="@username или email" style="width:100%;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:13px 16px;color:var(--text);font-size:14px;font-family:Inter,sans-serif;outline:none;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-2)'">
-              </div>
-              <div>
-                <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Тип партнёрства</label>
-                <div style="position:relative">
-                  <select id="pf-type" style="width:100%;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:13px 16px;color:var(--text);font-size:14px;font-family:Inter,sans-serif;outline:none;appearance:none;cursor:pointer;box-sizing:border-box">
-                    <option value="Бренд">Бренд</option>
-                    <option value="Студия">Студия</option>
-                    <option value="Мастер с аудиторией">Мастер с аудиторией</option>
-                    <option value="Другое">Другое</option>
-                  </select>
-                  <div style="position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--accent)">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Описание идеи</label>
-                <textarea id="pf-idea" placeholder="Коротко: что предлагаете и чем можем быть полезны друг другу" rows="4" style="width:100%;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:13px 16px;color:var(--text);font-size:14px;font-family:Inter,sans-serif;outline:none;resize:vertical;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-2)'"></textarea>
-              </div>
-              <button onclick="submitPartner()" style="width:100%;background:var(--accent);color:#0b1208;font-family:Oswald,sans-serif;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:18px;border-radius:99px;border:none;cursor:pointer;transition:background .15s">ОТПРАВИТЬ →</button>
+            <div style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
+              <div style="font-family:Oswald,sans-serif;font-weight:600;font-size:20px;letter-spacing:.02em">Напишите нам в Telegram</div>
+              <div style="font-size:14px;color:var(--text-muted);line-height:1.6">Коротко расскажите, кто вы и что предлагаете, — отвечаем лично и быстро. Никаких форм и анкет: обычный диалог в мессенджере.</div>
+              <a href="https://t.me/tatututbot" target="_blank" rel="noopener" style="display:inline-block;background:var(--accent);color:#0b1208;font-family:Oswald,sans-serif;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:18px 34px;border-radius:99px;text-decoration:none">Написать в Telegram →</a>
             </div>
           </div>
-          <div id="partner-success" style="display:none;text-align:center;padding:24px 0">
-            <div style="font-size:40px;margin-bottom:12px">✅</div>
-            <div style="font-family:Oswald,sans-serif;font-size:20px;font-weight:700;color:var(--accent)">Заявка отправлена!</div>
-            <div style="color:var(--text-muted);margin-top:8px;font-size:14px">Николай свяжется с вами в течение суток.</div>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -1136,31 +1108,6 @@ img,svg{display:block;max-width:100%}
   #partner .wrap > div > div:first-child{display:none}
 }
 </style>
-
-<script>
-async function submitPartner(){
-  const name = document.getElementById('pf-name').value.trim();
-  const contact = document.getElementById('pf-contact').value.trim();
-  const type = document.getElementById('pf-type').value;
-  const idea = document.getElementById('pf-idea').value.trim();
-  if(!name || !contact){alert('Пожалуйста, заполните имя и контакт');return;}
-  try{
-    const r = await fetch('https://worker-production-c1cb.up.railway.app/api/partner',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name,contact,type,idea})
-    });
-    if(r.ok){
-      document.getElementById('partner-form').style.display='none';
-      document.getElementById('partner-success').style.display='block';
-    } else {
-      alert('Ошибка отправки. Напишите напрямую: @MY_TATTOOER');
-    }
-  } catch(e){
-    alert('Ошибка сети. Напишите напрямую: @MY_TATTOOER');
-  }
-}
-</script>
 
 <!-- ── FOOTER ──────────────────────────────────────────────────── -->
 <footer class="footer">
@@ -1180,7 +1127,7 @@ async function submitPartner(){
           <span>ИИ-ассистент тату-мастера · <a href="https://telegram.me/ta2_blockbot" target="_blank" rel="noopener">@ta2_blockbot</a></span>
           <span>Канал <a href="/kanal" target="_blank" rel="noopener">@tatututai</a> · Instagram <a href="https://instagram.com/tattootut_ai" target="_blank" rel="noopener">@tattootut_ai</a></span>
           <span>С 2025 года · ИП Мельников Николай Игоревич · ИНН 501885184736</span>
-          <span><a href="/oferta">Публичная оферта</a></span>
+          <span><a href="/oferta">Публичная оферта</a></span> <span><a href="/privacy">Политика персональных данных</a></span> <span><a href="/terms">Пользовательское соглашение</a></span>
         </div>
       </div>
       <div class="footer-r">
