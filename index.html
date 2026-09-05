@@ -353,7 +353,7 @@ img,svg{display:block;max-width:100%}
 .t-trial-price .per{font-family:Inter,sans-serif;font-size:13px;color:var(--text-muted);font-weight:500;letter-spacing:.02em;margin-left:8px}
 .t-trial .btn{padding:14px 24px;font-size:12.5px;white-space:nowrap}
 @media (max-width:560px){ .t-trial{flex-direction:column;align-items:flex-start;gap:16px} .t-trial-r{width:100%;justify-content:space-between} .t-trial .btn{flex:1} }
-.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:stretch}
+.t-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:stretch}
 .tariff{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:30px 22px 24px;display:flex;flex-direction:column;gap:18px;transition:var(--tap)}
 .tariff:hover{border-color:var(--border-2);transform:translateY(-3px)}
 .tariff.hit{border-color:rgba(196,240,0,.55);background:linear-gradient(180deg,#172d20 0%,#16291f 60%,#172d20);box-shadow:0 0 0 1px rgba(196,240,0,.15),0 24px 60px rgba(196,240,0,.08);transform:translateY(-10px);animation:hit-pulse 4s ease-in-out infinite}
@@ -444,7 +444,7 @@ img,svg{display:block;max-width:100%}
 /* No-JS fallback */
 .no-js .reveal{opacity:1;transform:none;transition:none}
 </style>
-<!--build:reprovision-v456fix--></head>
+</head>
 <body>
 
 <!-- Icon defs ─────────────────────────────────────────────────── -->
@@ -491,7 +491,7 @@ img,svg{display:block;max-width:100%}
       <a href="#tariffs">Тарифы</a>
       <a href="#faq">Вопросы</a>
     </div>
-    <a href="https://telegram.me/ta2_blockbot" class="nav-cta" target="_blank" rel="noopener">
+    <a href="https://t.me/ta2_blockbot" class="nav-cta" target="_blank" rel="noopener">
       <svg><use href="#i-tg"/></svg>Получить заявки
     </a>
   </div>
@@ -510,45 +510,39 @@ img,svg{display:block;max-width:100%}
 
       <!-- Outer orbit — 3 icons distributed -->
       <div class="orb" style="--d:78%;--speed:90s">
-        <a class="pin" style="animation-delay:0s" href="https://telegram.me/ta2_blockbot?start=transfer" target="_blank" rel="noopener" aria-label="Трансфер">
+        <a class="pin" style="animation-delay:0s" href="https://t.me/ta2_blockbot?start=transfer" target="_blank" rel="noopener" aria-label="Трансфер">
           <div class="chip"><svg><use href="#i-printer"/></svg></div>
           <span class="tip">Трансфер</span>
         </a>
       </div>
       <div class="orb" style="--d:78%;--speed:90s;animation-delay:-30s">
-        <a class="pin" style="animation-delay:-30s" href="https://telegram.me/ta2_blockbot?start=sketch" target="_blank" rel="noopener" aria-label="Эскиз из тату">
+        <a class="pin" style="animation-delay:-30s" href="https://t.me/ta2_blockbot?start=sketch" target="_blank" rel="noopener" aria-label="Эскиз из тату">
           <div class="chip"><svg><use href="#i-pen"/></svg></div>
           <span class="tip">Эскиз из тату</span>
         </a>
       </div>
       <div class="orb" style="--d:78%;--speed:90s;animation-delay:-60s">
-        <a class="pin" style="animation-delay:-60s" href="https://telegram.me/ta2_blockbot?start=video" target="_blank" rel="noopener" aria-label="Видео-примерка">
+        <a class="pin" style="animation-delay:-60s" href="https://t.me/ta2_blockbot?start=video" target="_blank" rel="noopener" aria-label="Видео-примерка">
           <div class="chip"><svg><use href="#i-video"/></svg></div>
           <span class="tip">Видео-примерка</span>
         </a>
       </div>
 
-      <!-- Inner orbit — 4 icons, reversed (Создать эскиз + Оживить тату = герой-фичи) -->
+      <!-- Inner orbit — 3 icons, reversed (Создать эскиз = герой-фича) -->
       <div class="orb rev" style="--d:50%;--speed:60s">
-        <a class="pin" href="https://telegram.me/ta2_blockbot?start=blog_site" target="_blank" rel="noopener" aria-label="Создать эскиз">
+        <a class="pin" href="https://t.me/ta2_blockbot?start=blog_site" target="_blank" rel="noopener" aria-label="Создать эскиз">
           <div class="chip"><svg><use href="#i-pen"/></svg></div>
           <span class="tip">Создать эскиз</span>
         </a>
       </div>
-      <div class="orb rev" style="--d:50%;--speed:60s;animation-delay:-15s">
-        <a class="pin" style="animation-delay:-15s" href="https://telegram.me/ta2_blockbot?start=animate" target="_blank" rel="noopener" aria-label="Оживить тату">
-          <div class="chip"><svg><use href="#i-video"/></svg></div>
-          <span class="tip">Оживить тату</span>
-        </a>
-      </div>
-      <div class="orb rev" style="--d:50%;--speed:60s;animation-delay:-30s">
-        <a class="pin" style="animation-delay:-30s" href="https://telegram.me/ta2_blockbot?start=tryon" target="_blank" rel="noopener" aria-label="Примерка">
+      <div class="orb rev" style="--d:50%;--speed:60s;animation-delay:-20s">
+        <a class="pin" style="animation-delay:-20s" href="https://t.me/ta2_blockbot?start=tryon" target="_blank" rel="noopener" aria-label="Примерка">
           <div class="chip"><svg><use href="#i-image"/></svg></div>
           <span class="tip">Примерка</span>
         </a>
       </div>
-      <div class="orb rev" style="--d:50%;--speed:60s;animation-delay:-45s">
-        <a class="pin" style="animation-delay:-45s" href="https://telegram.me/ta2_blockbot?start=retouch" target="_blank" rel="noopener" aria-label="Ретушь фото">
+      <div class="orb rev" style="--d:50%;--speed:60s;animation-delay:-40s">
+        <a class="pin" style="animation-delay:-40s" href="https://t.me/ta2_blockbot?start=retouch" target="_blank" rel="noopener" aria-label="Ретушь фото">
           <div class="chip"><svg><use href="#i-wand"/></svg></div>
           <span class="tip">Ретушь фото</span>
         </a>
@@ -567,7 +561,7 @@ img,svg{display:block;max-width:100%}
       <h1 class="h-display reveal" style="transition-delay:80ms">КЛИЕНТЫ<span class="lime">.</span><br>ПО ТВОЕЙ<br>ССЫЛКЕ<span class="lime">.</span></h1>
       <p class="lead reveal" style="transition-delay:200ms">Кидаешь ссылку в сторис или директ — клиент примеряет <b style="color:var(--text);font-weight:600">твой эскиз на своём теле</b> и пишет «хочу». Тебе падает заявка с контактом. А ещё бот делает примерку, стенсил, эскиз по фото, ретушь и видео — всё в Telegram.</p>
       <div class="reveal" style="transition-delay:260ms">
-        <a href="https://telegram.me/ta2_blockbot" class="btn btn-primary btn-xl pulse" target="_blank" rel="noopener">
+        <a href="https://t.me/ta2_blockbot" class="btn btn-primary btn-xl pulse" target="_blank" rel="noopener">
           <svg><use href="#i-tg"/></svg>Получить ссылку для заявок <svg><use href="#i-arrow"/></svg>
         </a>
       </div>
@@ -630,53 +624,45 @@ img,svg{display:block;max-width:100%}
          role="region" aria-label="Возможности ТАТУ ТУТ">
       <div class="car-track">
 
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=blog_site" target="_blank" rel="noopener">
-          <img src="assets/03_sketch.jpg" alt="Создать эскиз голосом или текстом" loading="lazy" decoding="async" width="1280" height="720">
-          <div class="car-cap"><span class="ct">Создать эскиз с нуля</span><span class="cgo"><svg><use href="#i-tg"/></svg>Создать</span></div>
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=blog_site" target="_blank" rel="noopener">
+          <img src="assets/03_sketch.jpg" alt="Создай эскиз" loading="lazy" decoding="async" width="1280" height="720">
+          <div class="car-cap"><span class="ct">Эскиз голосом или текстом</span><span class="cgo"><svg><use href="#i-tg"/></svg>Создать</span></div>
         </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=animate" target="_blank" rel="noopener">
-          <img src="assets/06_animate.jpg" alt="Оживить тату — короткое видео" loading="lazy" decoding="async" width="1280" height="720">
-          <div class="car-cap"><span class="ct">🎬 Оживить тату → видео</span><span class="cgo"><svg><use href="#i-tg"/></svg>Оживить</span></div>
-        </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=tryon" target="_blank" rel="noopener">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=tryon" target="_blank" rel="noopener">
           <img src="assets/01_primerka.jpg" alt="Примерка тату на клиенте" loading="lazy" decoding="async" width="1280" height="720">
           <div class="car-cap"><span class="ct">Примерка тату на клиенте</span><span class="cgo"><svg><use href="#i-tg"/></svg>Открыть</span></div>
         </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=transfer" target="_blank" rel="noopener">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=transfer" target="_blank" rel="noopener">
           <img src="assets/02_transfer.jpg" alt="Трансфер-стенсил за 30 сек" loading="lazy" decoding="async" width="1280" height="720">
           <div class="car-cap"><span class="ct">Трансфер-стенсил за 30 сек</span><span class="cgo"><svg><use href="#i-tg"/></svg>Открыть</span></div>
         </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=sketch" target="_blank" rel="noopener">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=sketch" target="_blank" rel="noopener">
           <img src="assets/04_extract.jpg" alt="Эскиз из фото тату" loading="lazy" decoding="async" width="1280" height="720">
           <div class="car-cap"><span class="ct">Эскиз из фото тату</span><span class="cgo"><svg><use href="#i-tg"/></svg>Открыть</span></div>
         </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=retouch" target="_blank" rel="noopener">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=retouch" target="_blank" rel="noopener">
           <img src="assets/05_retouch.jpg" alt="Ретушь фото для портфолио" loading="lazy" decoding="async" width="1280" height="720">
           <div class="car-cap"><span class="ct">Ретушь фото для портфолио</span><span class="cgo"><svg><use href="#i-tg"/></svg>Открыть</span></div>
         </a>
 
         <!-- дубль для бесшовного loop -->
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=blog_site" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=blog_site" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
           <img src="assets/03_sketch.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720">
-          <div class="car-cap"><span class="ct">Создать эскиз с нуля</span><span class="cgo"><svg><use href="#i-tg"/></svg>Создать</span></div>
+          <div class="car-cap"><span class="ct">Эскиз голосом или текстом</span><span class="cgo"><svg><use href="#i-tg"/></svg>Создать</span></div>
         </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=animate" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
-          <img src="assets/06_animate.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720">
-          <div class="car-cap"><span class="ct">🎬 Оживить тату → видео</span><span class="cgo"><svg><use href="#i-tg"/></svg>Оживить</span></div>
-        </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=tryon" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=tryon" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
           <img src="assets/01_primerka.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720">
           <div class="car-cap"><span class="ct">Примерка тату на клиенте</span><span class="cgo"><svg><use href="#i-tg"/></svg>Открыть</span></div>
         </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=transfer" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=transfer" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
           <img src="assets/02_transfer.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720">
           <div class="car-cap"><span class="ct">Трансфер-стенсил за 30 сек</span><span class="cgo"><svg><use href="#i-tg"/></svg>Открыть</span></div>
         </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=sketch" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=sketch" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
           <img src="assets/04_extract.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720">
           <div class="car-cap"><span class="ct">Эскиз из фото тату</span><span class="cgo"><svg><use href="#i-tg"/></svg>Открыть</span></div>
         </a>
-        <a class="car-slide" href="https://telegram.me/ta2_blockbot?start=retouch" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+        <a class="car-slide" href="https://t.me/ta2_blockbot?start=retouch" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
           <img src="assets/05_retouch.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720">
           <div class="car-cap"><span class="ct">Ретушь фото для портфолио</span><span class="cgo"><svg><use href="#i-tg"/></svg>Открыть</span></div>
         </a>
@@ -734,43 +720,43 @@ img,svg{display:block;max-width:100%}
     </div>
 
     <div class="solution-grid reveal-stagger">
-      <a class="feat highlight reveal" href="https://telegram.me/ta2_blockbot?start=link" target="_blank" rel="noopener" style="--i:1">
+      <a class="feat highlight reveal" href="https://t.me/ta2_blockbot?start=link" target="_blank" rel="noopener" style="--i:1">
         <div class="feat-icon"><svg><use href="#i-tg"/></svg></div>
         <div class="feat-name">Ссылка-примерка</div>
         <div class="feat-desc">Главная фишка: персональная ссылка для сторис и директа. Клиент мерит твой эскиз на себе → пишет «хочу» → тебе падает заявка с контактом.</div>
         <div class="feat-meta"><span>Канал заявок</span><span>24/7</span></div>
       </a>
-      <a class="feat reveal" href="https://telegram.me/ta2_blockbot?start=create_sketch" target="_blank" rel="noopener" style="--i:2">
+      <a class="feat reveal" href="https://t.me/ta2_blockbot?start=create_sketch" target="_blank" rel="noopener" style="--i:2">
         <div class="feat-icon"><svg><use href="#i-pen"/></svg></div>
         <div class="feat-name">Эскиз голосом или текстом</div>
         <div class="feat-desc"><b>Наговори идею голосом</b> или напиши текстом — ИИ рисует готовый эскиз <b>в любом стиле</b>. Правишь прямо в чате: «добавь дым», «объедини два эскиза», «убери фон». Один инструмент вместо подписок на нейросети, ProCreate и Photoshop.</div>
         <div class="feat-meta"><span>Голос → эскиз</span><span>минуты</span></div>
       </a>
-      <a class="feat reveal" href="https://telegram.me/ta2_blockbot?start=tryon" target="_blank" rel="noopener" style="--i:2">
+      <a class="feat reveal" href="https://t.me/ta2_blockbot?start=tryon" target="_blank" rel="noopener" style="--i:2">
         <div class="feat-icon"><svg><use href="#i-image"/></svg></div>
         <div class="feat-name">Примерка</div>
         <div class="feat-desc">ИИ накладывает эскиз на фото тела клиента — он видит будущую тату на себе до записи. Сомнение «а вдруг не моё» снимается за 90 секунд.</div>
         <div class="feat-meta"><span>Время</span><span>90 сек</span></div>
       </a>
-      <a class="feat reveal" href="https://telegram.me/ta2_blockbot?start=transfer" target="_blank" rel="noopener" style="--i:3">
+      <a class="feat reveal" href="https://t.me/ta2_blockbot?start=transfer" target="_blank" rel="noopener" style="--i:3">
         <div class="feat-icon"><svg><use href="#i-printer"/></svg></div>
         <div class="feat-name">Трансфер</div>
         <div class="feat-desc">Стенсил из эскиза для термопринтера — готовый трансфер за 30 секунд вместо 30 минут в ProCreate. Больше времени на клиентов, меньше на рутину.</div>
         <div class="feat-meta"><span>Время</span><span>30 сек</span></div>
       </a>
-      <a class="feat reveal" href="https://telegram.me/ta2_blockbot?start=sketch" target="_blank" rel="noopener" style="--i:4">
+      <a class="feat reveal" href="https://t.me/ta2_blockbot?start=sketch" target="_blank" rel="noopener" style="--i:4">
         <div class="feat-icon"><svg><use href="#i-pen"/></svg></div>
         <div class="feat-name">Эскиз из тату</div>
         <div class="feat-desc">Клиент прислал чужую работу «хочу такое же» — отдаёшь свой чистый эскиз по фото за минуту и сразу зовёшь на примерку.</div>
         <div class="feat-meta"><span>Время</span><span>60 сек</span></div>
       </a>
-      <a class="feat reveal" href="https://telegram.me/ta2_blockbot?start=retouch" target="_blank" rel="noopener" style="--i:5">
+      <a class="feat reveal" href="https://t.me/ta2_blockbot?start=retouch" target="_blank" rel="noopener" style="--i:5">
         <div class="feat-icon"><svg><use href="#i-wand"/></svg></div>
         <div class="feat-name">Ретушь фото</div>
         <div class="feat-desc">AI-ретушь готовой работы для Instagram и Reels — портфолио, которое притягивает новых клиентов. Без Photoshop и Lightroom.</div>
         <div class="feat-meta"><span>Время</span><span>90 сек</span></div>
       </a>
-      <a class="feat reveal" href="https://telegram.me/ta2_blockbot?start=video" target="_blank" rel="noopener" style="--i:6">
+      <a class="feat reveal" href="https://t.me/ta2_blockbot?start=video" target="_blank" rel="noopener" style="--i:6">
         <div class="feat-icon"><svg><use href="#i-video"/></svg></div>
         <div class="feat-name">Видео-примерка</div>
         <div class="feat-desc">Оживляет будущую тату на теле клиента — вау-контент, от которого сложно отказаться. Усиливает «хочу» и греет сторис.</div>
@@ -900,7 +886,7 @@ img,svg{display:block;max-width:100%}
     <div class="t-head">
       <span class="eyebrow reveal">Тарифы</span>
       <h2 class="h-section reveal" style="transition-delay:40ms">Одна заявка <span class="lime">окупает месяц</span></h2>
-      <p class="lead reveal" style="transition-delay:80ms;text-align:center;margin:0 auto">Средний сеанс тату — 10–25 тыс ₽. Чем выше тариф, тем больше клиентов примерят твой эскиз по ссылке — и тем больше заявок. Начни с триала 7 дней за 499 ₽.</p>
+      <p class="lead reveal" style="transition-delay:80ms;text-align:center;margin:0 auto">Средний сеанс тату — 10–25 тыс ₽. Чем выше тариф, тем больше эскизов, трансферов и примерок в месяц. Начни с триала 7 дней за 499 ₽.</p>
     </div>
 
     <div class="t-trial reveal">
@@ -910,7 +896,7 @@ img,svg{display:block;max-width:100%}
       </div>
       <div class="t-trial-r">
         <span class="t-trial-price">499<span class="cur">&nbsp;₽</span><span class="per">/ 7 дней</span></span>
-        <a href="https://telegram.me/ta2_blockbot?start=trial" class="btn btn-outline" target="_blank" rel="noopener">Начать за 499 ₽</a>
+        <a href="https://t.me/ta2_blockbot?start=trial" class="btn btn-outline" target="_blank" rel="noopener">Начать за 499 ₽</a>
       </div>
     </div>
 
@@ -921,59 +907,81 @@ img,svg{display:block;max-width:100%}
           <span class="new">1 490<span class="cur">&nbsp;₽</span></span>
           <span class="per">в месяц</span>
         </div>
-        <div class="t-payback">50 клиентов / мес — для старта</div>
+        <div class="t-payback">Первый инструмент — попробовать в работе</div>
         <ul>
-          <li><svg><use href="#i-check"/></svg><b>50 клиентов</b>&nbsp;по ссылке / мес</li>
-          <li><svg><use href="#i-check"/></svg>15 созданий эскизов</li>
-          <li><svg><use href="#i-check"/></svg>15 трансферов</li>
-          <li><svg><use href="#i-check"/></svg>8 примерок</li>
-          <li><svg><use href="#i-check"/></svg>10 ретушей фото</li>
+          <li><svg><use href="#i-check"/></svg><b>Ссылка-примерка</b>&nbsp;для клиентов</li>
+          <li><svg><use href="#i-check"/></svg>12 созданий эскизов</li>
+          <li><svg><use href="#i-check"/></svg>20 трансферов</li>
+          <li><svg><use href="#i-check"/></svg>5 примерок</li>
+          <li><svg><use href="#i-check"/></svg>15 извлечений эскиза</li>
+          <li><svg><use href="#i-check"/></svg>12 ретушей фото</li>
         </ul>
         <div class="t-cta">
-          <a href="https://telegram.me/ta2_blockbot?start=buy_solo" class="btn btn-outline" target="_blank" rel="noopener">Подключить</a>
+          <a href="https://t.me/ta2_blockbot?start=buy_solo" class="btn btn-outline" target="_blank" rel="noopener">Подключить</a>
         </div>
       </article>
 
       <article class="tariff reveal" style="--i:2">
         <span class="badge">Популярный</span>
-        <div class="t-name">Мастер</div>
+        <div class="t-name">Про</div>
         <div class="t-price">
-          <span class="old">2 990 ₽</span>
-          <span class="new">2 490<span class="cur">&nbsp;₽</span></span>
-          <span class="per">1-й месяц · далее 2 990 ₽/мес</span>
+          <span class="new">2 990<span class="cur">&nbsp;₽</span></span>
+          <span class="per">в месяц</span>
         </div>
-        <div class="t-payback">250 клиентов / мес — для роста</div>
+        <div class="t-payback">Рабочий объём практикующего мастера</div>
         <ul>
-          <li><svg><use href="#i-check"/></svg><b>250 клиентов</b>&nbsp;по ссылке / мес</li>
-          <li><svg><use href="#i-check"/></svg>100 созданий эскизов</li>
+          <li><svg><use href="#i-check"/></svg><b>Ссылка-примерка</b>&nbsp;для клиентов</li>
+          <li><svg><use href="#i-check"/></svg>60 созданий эскизов</li>
           <li><svg><use href="#i-check"/></svg>60 трансферов</li>
-          <li><svg><use href="#i-check"/></svg>30 примерок</li>
-          <li><svg><use href="#i-check"/></svg>30 ретушей фото</li>
+          <li><svg><use href="#i-check"/></svg>10 примерок</li>
+          <li><svg><use href="#i-check"/></svg>40 извлечений эскиза</li>
+          <li><svg><use href="#i-check"/></svg>25 ретушей фото</li>
         </ul>
         <div class="t-cta">
-          <a href="https://telegram.me/ta2_blockbot?start=buy_pro" class="btn btn-outline" target="_blank" rel="noopener">Подключить</a>
+          <a href="https://t.me/ta2_blockbot?start=buy_pro" class="btn btn-primary" target="_blank" rel="noopener">Подключить</a>
         </div>
       </article>
 
-      <article class="tariff hit reveal" style="--i:3">
-        <span class="badge">★ Лучший выбор</span>
-        <div class="t-name">Поток</div>
+      <article class="tariff reveal" style="--i:3">
+        <div class="t-name">Про+</div>
         <div class="t-price">
-          <span class="new">5 990<span class="cur">&nbsp;₽</span></span>
+          <span class="new">3 990<span class="cur">&nbsp;₽</span></span>
           <span class="per">в месяц</span>
         </div>
-        <div class="t-payback">500 клиентов / мес — плотный поток</div>
+        <div class="t-payback">Плотный поток и больше примерок</div>
         <ul>
-          <li><svg><use href="#i-check"/></svg><b>500 клиентов</b>&nbsp;по ссылке / мес</li>
-          <li><svg><use href="#i-check"/></svg>250 созданий эскизов</li>
-          <li><svg><use href="#i-check"/></svg>120 трансферов</li>
-          <li><svg><use href="#i-check"/></svg>80 примерок</li>
-          <li><svg><use href="#i-check"/></svg>80 ретушей фото</li>
+          <li><svg><use href="#i-check"/></svg><b>Ссылка-примерка</b>&nbsp;для клиентов</li>
+          <li><svg><use href="#i-check"/></svg>100 созданий эскизов</li>
+          <li><svg><use href="#i-check"/></svg>100 трансферов</li>
+          <li><svg><use href="#i-check"/></svg>20 примерок</li>
+          <li><svg><use href="#i-check"/></svg>60 извлечений эскиза</li>
+          <li><svg><use href="#i-check"/></svg>40 ретушей фото</li>
         </ul>
         <div class="t-cta">
-          <a href="https://telegram.me/ta2_blockbot?start=buy_studio" class="btn btn-primary" target="_blank" rel="noopener">Подключить Поток</a>
+          <a href="https://t.me/ta2_blockbot?start=buy_atelier" class="btn btn-outline" target="_blank" rel="noopener">Подключить</a>
         </div>
       </article>
+
+      <article class="tariff reveal" style="--i:4">
+        <div class="t-name">Макс</div>
+        <div class="t-price">
+          <span class="new">6 990<span class="cur">&nbsp;₽</span></span>
+          <span class="per">в месяц</span>
+        </div>
+        <div class="t-payback">Максимум объёма для студии</div>
+        <ul>
+          <li><svg><use href="#i-check"/></svg><b>Ссылка-примерка</b>&nbsp;для клиентов</li>
+          <li><svg><use href="#i-check"/></svg>150 созданий эскизов</li>
+          <li><svg><use href="#i-check"/></svg>150 трансферов</li>
+          <li><svg><use href="#i-check"/></svg>40 примерок</li>
+          <li><svg><use href="#i-check"/></svg>100 извлечений эскиза</li>
+          <li><svg><use href="#i-check"/></svg>60 ретушей фото</li>
+        </ul>
+        <div class="t-cta">
+          <a href="https://t.me/ta2_blockbot?start=buy_studio" class="btn btn-outline" target="_blank" rel="noopener">Подключить</a>
+        </div>
+      </article>
+
     </div>
 
     <div class="addon reveal">
@@ -985,13 +993,13 @@ img,svg{display:block;max-width:100%}
         </div>
       </div>
       <div class="addon-r">
-        <a class="addon-pack" href="https://telegram.me/ta2_blockbot?start=buy_video" target="_blank" rel="noopener"><span class="pq">3 видео</span><span class="pp">690 ₽</span></a>
-        <a class="addon-pack" href="https://telegram.me/ta2_blockbot?start=buy_video" target="_blank" rel="noopener"><span class="pq">10 видео</span><span class="pp">1 990 ₽</span></a>
-        <a class="addon-pack" href="https://telegram.me/ta2_blockbot?start=buy_video" target="_blank" rel="noopener"><span class="pq">30 видео</span><span class="pp">4 990 ₽</span></a>
+        <a class="addon-pack" href="https://t.me/ta2_blockbot?start=buy_video" target="_blank" rel="noopener"><span class="pq">3 видео</span><span class="pp">390 ₽</span></a>
+        <a class="addon-pack" href="https://t.me/ta2_blockbot?start=buy_video" target="_blank" rel="noopener"><span class="pq">10 видео</span><span class="pp">690 ₽</span></a>
+        <a class="addon-pack" href="https://t.me/ta2_blockbot?start=buy_video" target="_blank" rel="noopener"><span class="pq">25 видео</span><span class="pp">1 490 ₽</span></a>
       </div>
     </div>
 
-    <p class="t-note reveal">Тариф можно сменить в любой момент. <b>Триал 7 дней — за 499 ₽.</b> Оплата через СБП, отмена в 1 клик. «Клиенты по ссылке» — это бесплатные примерки для твоих клиентов: они мерят, ты получаешь заявки.</p>
+    <p class="t-note reveal">Тариф можно сменить в любой момент. <b>Триал 7 дней — за 499 ₽.</b> Оплата через СБП, отмена в 1 клик. Ссылка-примерка: клиент мерит твой эскиз на себе и оставляет заявку.</p>
   </div>
 </section>
 
@@ -1044,7 +1052,7 @@ img,svg{display:block;max-width:100%}
     <p class="lead reveal" style="transition-delay:80ms">Получи ссылку, кинь её в сторис — и пусть клиенты примеряют. 7 дней полного доступа за 499 ₽.</p>
 
     <div class="reveal" style="transition-delay:120ms">
-      <a href="https://telegram.me/ta2_blockbot" class="btn btn-primary btn-xl pulse" target="_blank" rel="noopener">
+      <a href="https://t.me/ta2_blockbot" class="btn btn-primary btn-xl pulse" target="_blank" rel="noopener">
         <svg><use href="#i-tg"/></svg>Получить ссылку за 499 ₽ <svg><use href="#i-arrow"/></svg>
       </a>
     </div>
@@ -1087,13 +1095,41 @@ img,svg{display:block;max-width:100%}
       <div class="reveal" style="transition-delay:60ms">
         <div style="background:var(--surface);border:1px solid var(--border-2);border-radius:var(--radius-lg);padding:32px 28px">
           <div id="partner-form">
-            <div style="display:flex;flex-direction:column;gap:18px;align-items:flex-start">
-              <div style="font-family:Oswald,sans-serif;font-weight:600;font-size:20px;letter-spacing:.02em">Напишите нам в Telegram</div>
-              <div style="font-size:14px;color:var(--text-muted);line-height:1.6">Коротко расскажите, кто вы и что предлагаете, — отвечаем лично и быстро. Никаких форм и анкет: обычный диалог в мессенджере.</div>
-              <a href="https://t.me/tatututbot" target="_blank" rel="noopener" style="display:inline-block;background:var(--accent);color:#0b1208;font-family:Oswald,sans-serif;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:18px 34px;border-radius:99px;text-decoration:none">Написать в Telegram →</a>
+            <div style="display:flex;flex-direction:column;gap:16px">
+              <div>
+                <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Имя</label>
+                <input id="pf-name" type="text" placeholder="Как к вам обращаться" style="width:100%;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:13px 16px;color:var(--text);font-size:14px;font-family:Inter,sans-serif;outline:none;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-2)'">
+              </div>
+              <div>
+                <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Контакт (TG / Email)</label>
+                <input id="pf-contact" type="text" placeholder="@username или email" style="width:100%;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:13px 16px;color:var(--text);font-size:14px;font-family:Inter,sans-serif;outline:none;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-2)'">
+              </div>
+              <div>
+                <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Тип партнёрства</label>
+                <div style="position:relative">
+                  <select id="pf-type" style="width:100%;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:13px 16px;color:var(--text);font-size:14px;font-family:Inter,sans-serif;outline:none;appearance:none;cursor:pointer;box-sizing:border-box">
+                    <option value="Бренд">Бренд</option>
+                    <option value="Студия">Студия</option>
+                    <option value="Мастер с аудиторией">Мастер с аудиторией</option>
+                    <option value="Другое">Другое</option>
+                  </select>
+                  <div style="position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--accent)">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label style="display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:8px">Описание идеи</label>
+                <textarea id="pf-idea" placeholder="Коротко: что предлагаете и чем можем быть полезны друг другу" rows="4" style="width:100%;background:var(--surface-2);border:1px solid var(--border-2);border-radius:10px;padding:13px 16px;color:var(--text);font-size:14px;font-family:Inter,sans-serif;outline:none;resize:vertical;transition:border-color .2s;box-sizing:border-box" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border-2)'"></textarea>
+              </div>
+              <button onclick="submitPartner()" style="width:100%;background:var(--accent);color:#0b1208;font-family:Oswald,sans-serif;font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase;padding:18px;border-radius:99px;border:none;cursor:pointer;transition:background .15s">ОТПРАВИТЬ →</button>
             </div>
           </div>
-          
+          <div id="partner-success" style="display:none;text-align:center;padding:24px 0">
+            <div style="font-size:40px;margin-bottom:12px">✅</div>
+            <div style="font-family:Oswald,sans-serif;font-size:20px;font-weight:700;color:var(--accent)">Заявка отправлена!</div>
+            <div style="color:var(--text-muted);margin-top:8px;font-size:14px">Николай свяжется с вами в течение суток.</div>
+          </div>
         </div>
       </div>
     </div>
@@ -1108,6 +1144,31 @@ img,svg{display:block;max-width:100%}
   #partner .wrap > div > div:first-child{display:none}
 }
 </style>
+
+<script>
+async function submitPartner(){
+  const name = document.getElementById('pf-name').value.trim();
+  const contact = document.getElementById('pf-contact').value.trim();
+  const type = document.getElementById('pf-type').value;
+  const idea = document.getElementById('pf-idea').value.trim();
+  if(!name || !contact){alert('Пожалуйста, заполните имя и контакт');return;}
+  try{
+    const r = await fetch('https://worker-production-c1cb.up.railway.app/api/partner',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name,contact,type,idea})
+    });
+    if(r.ok){
+      document.getElementById('partner-form').style.display='none';
+      document.getElementById('partner-success').style.display='block';
+    } else {
+      alert('Ошибка отправки. Напишите напрямую: @MY_TATTOOER');
+    }
+  } catch(e){
+    alert('Ошибка сети. Напишите напрямую: @MY_TATTOOER');
+  }
+}
+</script>
 
 <!-- ── FOOTER ──────────────────────────────────────────────────── -->
 <footer class="footer">
@@ -1124,10 +1185,9 @@ img,svg{display:block;max-width:100%}
         </svg>
         <div class="footer-meta">
           <span class="top">ТАТУ ТУТ</span>
-          <span>ИИ-ассистент тату-мастера · <a href="https://telegram.me/ta2_blockbot" target="_blank" rel="noopener">@ta2_blockbot</a></span>
-          <span>Канал <a href="/kanal" target="_blank" rel="noopener">@tatututai</a> · Instagram <a href="https://instagram.com/tattootut_ai" target="_blank" rel="noopener">@tattootut_ai</a></span>
+          <span>ИИ-ассистент тату-мастера · <a href="https://t.me/ta2_blockbot" target="_blank" rel="noopener">@ta2_blockbot</a></span>
           <span>С 2025 года · ИП Мельников Николай Игоревич · ИНН 501885184736</span>
-          <span><a href="/oferta">Публичная оферта</a></span> <span><a href="/privacy">Политика персональных данных</a></span> <span><a href="/terms">Пользовательское соглашение</a></span>
+          <span><a href="/oferta">Публичная оферта</a></span>
         </div>
       </div>
       <div class="footer-r">
@@ -1291,19 +1351,10 @@ function boot(){
   initNav();
   initCarousel();
 }
-// ── BULLETPROOF: контент ВСЕГДА проявляется, даже если boot/observer/сеть
-//    дали сбой. Независимый таймер планируется ПЕРВЫМ и не зависит от boot. ──
-setTimeout(function(){
-  try { document.querySelectorAll('.reveal:not(.in)').forEach(function(e){ e.classList.add('in'); }); } catch(_){}
-}, 2500);
-try {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
-    boot();
-  }
-} catch(_){
-  document.querySelectorAll('.reveal:not(.in)').forEach(function(e){ e.classList.add('in'); });
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
 }
 </script>
 
